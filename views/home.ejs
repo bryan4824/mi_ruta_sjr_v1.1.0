@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi Ruta SJR</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/css/home.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="
+	sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <link rel="shortcut icon" href="/image/favicon.ico">
+  
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+    crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg rounded bg-body-tertiary">
+
+    <div class="container">
+      <!-- Logo -->
+      <a class="navbar-brand" href="#">
+        <img src="/image/logo_sin_fondo.png" height="30" alt="Logo">
+      </a>
+
+      <!-- Botón toggle para móvil -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
+        aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Menú colapsable -->
+      <div class="collapse navbar-collapse" id="navbarContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="/">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" id="contacto" href="/contacto">Contacto</a></li>
+          <li class="nav-item"><a class="nav-link" href="#nosotros">Sobre Nosotros</a></li>
+        </ul>
+        <div class="d-flex align-items-center">
+          <a class="btn btn-light me-2" href="/login">Iniciar sesión</a>
+          <a class="btn btn-warning" href="/register">Registrar</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+  
+  <!-- HERO / HOME -->
+  <header id="inicio">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-6">
+          <h1>Bienvenido a <br><span class="text-danger">Mi Ruta SJR</span></h1>
+          <p>Facilitamos tu movilidad en San Juan del Río. Consulta rutas, horarios y paradas fácilmente desde nuestra
+            plataforma intuitiva.
+            Tu viaje comienza aquí.</p>
+          <a href="/login" class="btn btn-danger mt-3">Explorar Rutas</a>
+        </div>
+        <div class="col-md-6 text-center">
+          <img src="/image/logo2.png" alt="Logo Mi Ruta SJR" class="hero-img">
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- SOBRE NOSOTROS -->
+  <section id="nosotros">
+    <div class="container text-center">
+      <h2 class="fw-bold mb-4">Sobre Nosotros</h2>
+      <p>Somos un equipo de desarrolladores comprometidos con mejorar la movilidad urbana en San Juan del Río.
+        Nuestro objetivo es ofrecer una plataforma confiable que conecte a los usuarios con las rutas más convenientes.
+      </p>
+    </div>
+  </section>
+
+  <!-- SERVICIOS -->
+  <section id="servicios" class="bg-light">
+    <div class="container text-center">
+      <h2 class="fw-bold mb-4">Servicios</h2>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="p-4 border rounded-4 shadow-sm h-100">
+            <h5>Consulta de Rutas</h5>
+            <p>Encuentra la mejor ruta para tu destino con paradas principales.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="p-4 border rounded-4 shadow-sm h-100">
+            <h5>Mapa Interactivo</h5>
+            <p>Explora el mapa de San Juan del Río con rutas visuales y puntos de interés destacados.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="p-4 border rounded-4 shadow-sm h-100">
+            <h5>Notificaciones</h5>
+            <p>Recibe alertas sobre cambios de ruta y avisos del transporte público.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- CONTACTO -->
+  <section id="contacto" class="bg-light">
+    <div class="container text-center">
+      <h2 class="fw-bold mb-4">Contáctanos</h2>
+      <p>¿Tienes dudas o sugerencias? Envíanos un mensaje y con gusto te atenderemos.</p>
+      <a href="/contacto" class="btn btn-danger mt-3">Enviar mensaje</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+
+  <%- include("templates/footer.ejs")%>

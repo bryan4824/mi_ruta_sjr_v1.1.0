@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Perfil de Usuario</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- ANIMACIÓN SUAVE PARA BOTONES -->
+    <style>
+        .btn-anim {
+            transition: all 0.25s ease-in-out;
+            transform: scale(1);
+        }
+
+        .btn-anim:hover {
+            transform: scale(1.04);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+    </style>
+</head>
+
+<!-- <body style="background:#FFF7E8;"> -->
+<!-- <body style="background:#F4F9FF;"> -->
+<!-- <body style="background:#FFFDF5;"> -->
+
+<body style="background:#FFF4E5;">
+
+
+
+8
+    <!-- NAVBAR ORIGINAL -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
+        <div class="container">
+            <a class="navbar-brand me-2" href="#">
+                <img src="/image/logo_sin_fondo.png" height="30" alt="Logo" />
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarContent">
+
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="/">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/contacto">Contacto</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#nosotros">Sobre Nosotros</a></li>
+                </ul>
+
+                <div class="d-flex align-items-center">
+                    <!-- <a class="btn btn-light text-dark px-3 me-2" href="/login">Iniciar sesión</a> -->
+                    <a class="btn btn-warning me-3" style="background:#4CD4A9; color:white; border:none;"
+                        href="/rutas">Volver a
+                        rutas</a>
+                    <!-- <button class="btn w-100 mt-3 fw-semibold btn-anim"
+        style="background:#4CD4A9; color:white; border:none;"> -->
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-4">
+
+        <div class="card shadow-sm border-0 rounded-4">
+            <div class="card-body p-4">
+
+                <!-- FOTO + NOMBRE -->
+                <div class="text-center mb-4">
+                    <img src="<%= user.photoPerfil ? '/uploads/' + user.photoPerfil : 'https://cdn-icons-png.flaticon.com/512/149/149071.png' %>"
+                        class="rounded-circle border"
+                        style="width:130px; height:130px; object-fit:cover; border-color:#dcdcdc;" />
+
+                    <h3 class="mt-3 text-dark fw-semibold">
+                        <%= user.username %>
+                    </h3>
+                </div>
+
+                <hr class="text-secondary">
+
+                <!-- DATOS -->
+                <h5 class="fw-bold text-secondary mb-3">Información del Usuario</h5>
+
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">
+                        <strong>Nombre completo:</strong>
+                        <%= user.nombre || "No registrado" %>
+                    </li>
+                    <li class="list-group-item">
+                        <strong>Edad:</strong>
+                        <%= user.edad || "No registrada" %>
+                    </li>
+                    <li class="list-group-item">
+                        <strong>Teléfono:</strong>
+                        <%= user.telefono || "No registrado" %>
+                    </li>
+                    <li class="list-group-item">
+                        <strong>Correo electrónico:</strong>
+                        <%= user.email %>
+                    </li>
+                    <li class="list-group-item">
+                        <strong>ID de Usuario:</strong>
+                        <%= user._id %>
+                    </li>
+                </ul>
+
+                <a href="/perfil" class="btn btn-success w-100 mt-4 rounded-pill">
+                    Editar datos
+                </a>
+
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <footer class="p-3 mb-2  text-white" style="background:#FFF4E5;">
+        <div class="container text-center">
+            <p class="mb-1 text-dark">© 2025 Mi Ruta SJR</p>
+            <a href="/terminos" class="text-secondary text-decoration-none mx-2">Términos</a> |
+            <a href="/privacidad" class="text-secondary text-decoration-none mx-2">Privacidad</a> |
+            <a href="/faq" class="text-secondary text-decoration-none mx-2">FAQ</a>
+        </div>
+    </footer>
+</body>
+
+</html>
