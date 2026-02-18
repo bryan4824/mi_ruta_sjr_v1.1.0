@@ -21,7 +21,7 @@ loginForm?.addEventListener('submit', e => {
             if (res.ok) {
                 loginSpan.innerText = 'Sesión iniciada. Entrando...'
                 loginSpan.style.color = 'green'
-                setTimeout(() => { window.location.href = '/protected' }, 2000)
+                setTimeout(() => { window.location.href = '/rutas' }, 2000)
             } else {
                 loginSpan.innerText = 'Error al iniciar sesión'
                 loginSpan.style.color = 'red'

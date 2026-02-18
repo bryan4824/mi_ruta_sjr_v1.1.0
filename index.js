@@ -180,9 +180,6 @@ app.get("/datosUsuario", async (req, res) => {
 });
 app.use('/uploads', express.static('uploads'));
 
-
-
-
 app.get('/rutas', async (req, res) => {
 	if (!req.user) return res.status(403).send('Acces not authorized');
 	// Obtener usuario completo con rol
@@ -317,7 +314,6 @@ app.get('/verify', async (req, res) => {
 
 
 //editar usuario 
-
 app.get("/editar/:id", async function editar(req, res) {
 	try {
 		const user = await UserRepository.buscarPorId(req.params.id)
